@@ -8,6 +8,9 @@
     <artifactId>shiro-example</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <modules>
         <module>shiro-example-chapter2</module>
         <module>shiro-example-chapter3</module>
@@ -31,7 +34,7 @@
         <module>shiro-example-chapter19</module>
         <module>shiro-example-chapter20</module>
         <module>shiro-example-chapter21</module>
-<!--        <module>shiro-example-chapter22</module>-->
+        <!--        <module>shiro-example-chapter22</module>-->
         <module>shiro-example-chapter23-server</module>
         <module>shiro-example-chapter23-core</module>
         <module>shiro-example-chapter23-client</module>
@@ -41,6 +44,18 @@
         <module>shiro-example-chapter23-nginx</module>
         <module>shiro-example-chapter24</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
